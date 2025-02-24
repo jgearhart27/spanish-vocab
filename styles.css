@@ -50,3 +50,22 @@ button {
   background-color: hsl(187, 100%, 50%);
   cursor: pointer;
 }
+button:hover {
+  background-color: hsl(187, 100%, 45%);
+}
+
+@media (max-width: 500px) {
+  .flashcard-container {
+    height: 200px; /* Reduce height for small screens */
+  }
+
+  .flashcard .side {
+    font-size: 1.2rem; /* Slightly smaller font for readability */
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 0.9rem; /* Smaller button text */
+  }
+}
