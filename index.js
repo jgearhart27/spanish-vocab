@@ -140,6 +140,7 @@ const front = document.getElementById("front");
 const back = document.getElementById("back");
 const toggleMode = document.getElementById("toggleMode");
 const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
 
 function loadCard() {
   if (spanishFirst) {
@@ -172,5 +173,13 @@ nextButton.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % words.length;
   flashcard.classList.remove("flipped");
   setTimeout(loadCard, 300);
+});
+
+prevButton.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    flashcard.classList.remove("flipped");
+    setTimeout(loadCard, 300);
+  }
 });
 loadCard();
