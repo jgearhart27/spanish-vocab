@@ -165,7 +165,7 @@ flashcard.addEventListener("click", () => {
 
 toggleMode.addEventListener("click", () => {
   spanishFirst = !spanishFirst;
-  toggleMode.textContent = spanishFirst ? "Spanish First" : "English First";
+  toggleMode.textContent = spanishFirst ? "English" : "Spanish";
   flashcard.classList.remove("flipped");
   loadCard();
 });
