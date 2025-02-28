@@ -141,6 +141,7 @@ const back = document.getElementById("back");
 const toggleMode = document.getElementById("toggleMode");
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
+const randomButton = document.getElementById("random");
 
 function loadCard() {
   if (spanishFirst) {
@@ -181,5 +182,11 @@ prevButton.addEventListener("click", () => {
     flashcard.classList.remove("flipped");
     setTimeout(loadCard, 300);
   }
+});
+
+randomButton.addEventListener("click", () => {
+  currentIndex = Math.floor(Math.random() * words.length);
+  flashcard.classList.remove("flipped");
+  loadCard();
 });
 loadCard();
